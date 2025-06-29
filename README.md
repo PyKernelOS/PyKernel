@@ -51,8 +51,4 @@ Replace path\to\your\project with path of Your OS Project
 ### Access GUI Editor
 ```bash
 pykernel Start
-<<<<<<< HEAD
 ```
-=======
-```
->>>>>>> dc098ee5f6201cdcd4f2c96a7a3483d5e2d562f5
