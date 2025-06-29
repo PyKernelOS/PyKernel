@@ -88,6 +88,8 @@
 #define MICROPY_FLOAT_IMPL          (MICROPY_FLOAT_IMPL_NONE)
 #define MICROPY_ENABLE_PYSTACK      (1)
 #define MICROPY_USE_INTERNAL_PRINTF (1)
+#define MICROPY_PY_USER_CMODULE     (1)
+#define MICROPY_ENABLE_EXTRA_MODS   (1)
 
 // type definitions for the specific machine
 

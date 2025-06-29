@@ -65,6 +65,8 @@
 #define MICROPY_VFS                 (1)
 #define MICROPY_VFS_ROM             (1)
 #define MICROPY_VFS_ROM_IOCTL       (0)
+#define MICROPY_PY_USER_CMODULE     (1)
+#define MICROPY_ENABLE_EXTRA_MODS   (1)
 
 // type definitions for the specific machine
 
