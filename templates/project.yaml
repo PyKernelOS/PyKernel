@@ -1,6 +1,6 @@
 Project: "PyKernel OS"
-Interface: "CLI"
 
 includes: []
 FS_Includes: []
 BuildType: "ISO"
+BuildDir: "build"

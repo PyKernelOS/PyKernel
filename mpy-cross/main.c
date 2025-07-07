@@ -119,40 +119,39 @@ static int compile_and_save(const char *file, const char *output_file, const cha
 
 static int usage(char **argv) {
     printf(
-        "usage: %s [<opts>] [-X <implopt>] [--] <input filename>\n"
+        "usage: %s [<opts>] [<extension>]\n"
         "Options:\n"
-        "--version : show version information\n"
-        "-o : output file for compiled bytecode (defaults to input filename with .mpy extension, or stdout if input is stdin)\n"
-        "-s : source filename to embed in the compiled bytecode (defaults to input file)\n"
-        "-v : verbose (trace various operations); can be multiple\n"
-        "-O[N] : apply bytecode optimizations of level N\n"
-        "\n"
-        "Target specific options:\n"
-        "-msmall-int-bits=number : set the maximum bits used to encode a small-int\n"
-        "-march=<arch> : set architecture for native emitter;\n"
-        "                x86, x64, armv6, armv6m, armv7m, armv7em, armv7emsp, armv7emdp, xtensa, xtensawin, rv32imc, host, debug\n"
-        "\n"
-        "Implementation specific options:\n", argv[0]
+        "--version : show version information.\n"
+        "new       : create a new project.\n"
+        "build     : build this project on this directory.\n"
+        "debug     : debug this project on this directory.\n"
+        "gui       : launch GUI Editor.\n", argv[0]
         );
-    int impl_opts_cnt = 0;
-    printf(
-        #if MICROPY_EMIT_NATIVE
-        "  emit={bytecode,native,viper} -- set the default code emitter\n"
-        #else
-        "  emit=bytecode -- set the default code emitter\n"
-        #endif
-        );
-    impl_opts_cnt++;
-    printf(
-        "  heapsize=<n> -- set the heap size for the GC (default %ld)\n"
-        , heap_size);
-    impl_opts_cnt++;
-
-    if (impl_opts_cnt == 0) {
-        printf("  (none)\n");
+    
+    if(argv[1] == "new" && argv[2] == "--help") {
+        printf(
+            "Usage: %s new <project_name>\n"
+            "Creates a new project with the specified name.\n", argv[0]);
     }
-
-    return 1;
+    else if(argv[1] == "build" && argv[2] == "--help") {
+        printf(
+            "Usage: %s build\n"
+            "build this project on this directory.\n", argv[0]);
+    }
+    else if(argv[1] == "debug" && argv[2] == "--help") {
+        printf(
+            "Usage: %s debug \n"
+            "debug this project on this directory.\n"
+            "\n"
+            "--verbose     : Get Full Debug Output"
+            "debugOption   : VMWARE, VirtualBox, QEMU, Hyper-V, Boochs, PXE"
+            "--no-gui      : Disable GUI Mode (Not Recommended For GUI OS)", argv[0]);
+    }
+    else if(argv[1] == "gui" && argv[2] == "--help") {
+        printf(
+            "Usage: %s gui\n"
+            "Launches the GUI Editor.\n", argv[0]);
+    }
 }
 
 // Process options which set interpreter init options
