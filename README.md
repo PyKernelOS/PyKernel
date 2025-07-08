@@ -1,7 +1,8 @@
 # PyKernel
-PyKernel Is MicroPython Based Operating System SDK. PyKernel Compile Python To Slandone Operating System. But Project Is Incomplete
+PyKernel is a MicroPython-based operating system SDK. PyKernel Compile Python To Slandone Operating System. But the Project Is Incomplete
+Please Read: CONTRIBUTING.md
 
-## Features
+## Features (But Not Added)
 - Low Level Access
 - High Quality Graphics
 - Python Based
