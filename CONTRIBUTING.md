@@ -7,6 +7,22 @@
 Join Github Discussions: https://github.com/PyKernelOS/PyKernel/discussions
 Join Discord: https://discord.gg/n9JSkHyZ
 
+## Step To Reproduction:
+
+### Step1: Clone The Repo
+```bash
+git clone https://github.com/PyKernelOS/PyKernel.git
+cd PyKernel
+```
+
+### Step2: Compile The Source Code
+```
+# Compilation
+cd mpy-cross
+make
+```
+
+Task: Please Make Like:
 ## Get Started
 
 ### 1. Get The Repo
