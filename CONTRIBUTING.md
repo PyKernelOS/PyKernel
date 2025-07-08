@@ -1,3 +1,12 @@
+## Looking for Developers:
+- OS Developer
+- Hardware Engineer
+- Programming Language Developer (For Implementation: Compile .py to .elf)
+- UEFI Programmer
+
+Join Github Discussions: https://github.com/PyKernelOS/PyKernel/discussions
+Join Discord: https://discord.gg/n9JSkHyZ
+
 ## Get Started
 
 ### 1. Get The Repo
