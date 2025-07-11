@@ -47,7 +47,7 @@
 #define INVALID_LABEL (0xffff)
 
 typedef enum {
-// define rules with a compile function
+/* define rules with a compile function */
 #define DEF_RULE(rule, comp, kind, ...) PN_##rule,
 #define DEF_RULE_NC(rule, kind, ...)
     #include "py/grammar.h"
