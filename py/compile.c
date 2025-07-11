@@ -54,7 +54,7 @@ typedef enum {
 #undef DEF_RULE
 #undef DEF_RULE_NC
     PN_const_object, // special node for a constant, generic Python object
-// define rules without a compile function
+/* define rules without a compile function */
 #define DEF_RULE(rule, comp, kind, ...)
 #define DEF_RULE_NC(rule, kind, ...) PN_##rule,
     #include "py/grammar.h"
@@ -62,8 +62,8 @@ typedef enum {
 #undef DEF_RULE_NC
 } pn_kind_t;
 
-// Whether a mp_parse_node_struct_t that has pns->kind == PN_testlist_comp
-// corresponds to a list comprehension or generator.
+/* Whether a mp_parse_node_struct_t that has pns->kind == PN_testlist_comp */
+/* corresponds to a list comprehension or generator. */
 #define MP_PARSE_NODE_TESTLIST_COMP_HAS_COMP_FOR(pns) \
     (MP_PARSE_NODE_STRUCT_NUM_NODES(pns) == 2 && \
     MP_PARSE_NODE_IS_STRUCT_KIND(pns->nodes[1], PN_comp_for))
