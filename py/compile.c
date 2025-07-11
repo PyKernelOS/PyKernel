@@ -1,3 +1,6 @@
+/* Note to self- this code uses // comments which aren't available
+   in C90 - recommend switching to C90 comments */
+
 /*
  * This file is part of the MicroPython project, http://micropython.org/
  *
